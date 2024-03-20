@@ -1,0 +1,50 @@
+<div style="width: 100%;height: 100vh;" class="d-flex justify-content-center align-items-center bg-success">
+    <div style="width: 1000px;" class="bg-dark shadow row rounded p-5 align-items-center">
+        <div  class="col-lg-6 ">
+            <h2 style="color: rgb(246, 232, 214);" class="text-center">Welcome to</h2>
+            <h1 class="text-success text-center border rounded"> <i class="fa-solid fa-user-group"></i> NetFriends </h1>
+            <h5 style="color: rgb(246, 232, 214);" class="text-center">social media platform</h5>
+        </div>
+        <div class="col-lg-6">
+             <form [formGroup]="loginForm" class="border border-success p-5 rounded">
+                <h1 style="color: rgb(246, 232, 214);" >Login <span class="text-success">Here</span></h1>
+                <div class="form-floating mb-3">
+                    <input
+                      name="email"
+                      formControlName="email"
+                      type="email"
+                      class="form-control"
+                      id="floatingInput"
+                      placeholder="name@example@gmail.com"
+          
+                     
+                    />
+                    <label for="floatingInput">Email Address</label>
+                  </div>
+                  <div *ngIf="loginForm.get('email')?.errors && loginForm.get('email')?.touched" class="mb-3 text-danger">Invalid Email </div>
+                  <div class="form-floating mb-3">
+                    <input
+                      name="password"
+                      formControlName="password"
+                      type="password"
+                      class="form-control"
+                      id="floatingInputPassword"
+                      placeholder="Password"
+          
+                     
+                    />
+                    <label for="floatingInputPassword">Password</label>
+                  </div>
+                  <div *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched" class="mb-3 text-danger">Invalid Password </div>
+
+                  <div>
+                    <button style="color: rgb(246, 232, 214);" (click)="login()"  type="submit"  class="btn btn-success w-100">Login</button>
+                  </div>
+                  <p class="text-center"> or </p>
+
+                  <p style="font-size: 18px;color: rgb(246, 232, 214);">New User? <span style="cursor: pointer;" routerLink="register" class="text-primary">Register</span> here </p>
+
+             </form>
+        </div>
+    </div>
+</div>

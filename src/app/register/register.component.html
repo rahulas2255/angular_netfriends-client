@@ -1,0 +1,84 @@
+<div style="width: 100%;height: 100vh;" class="d-flex justify-content-center align-items-center bg-success">
+    <div style="width: 1000px;" class="bg-dark shadow row rounded p-5 align-items-center">
+        <div  class="col-lg-6 ">
+            <h2 style="color: rgb(246, 232, 214);" class="text-center">Welcome to</h2>
+            <h1  class="text-success text-center border rounded"> <i class="fa-solid fa-user-group"></i> NetFriends </h1>
+            <h5 style="color: rgb(246, 232, 214);" class="text-center">social media platform</h5>
+        </div>
+        <div class="col-lg-6">
+             <form [formGroup]="registerForm" class="border border-success p-5 rounded">
+                <h1 style="color: rgb(246, 232, 214);">Register <span class="text-success">Here</span></h1>
+                <div class="form-floating mb-3">
+                    <input
+                      style="background-color:rgb(246, 232, 214);"
+                      name="name"
+                      formControlName="name"
+                      type="text"
+                      class="form-control"
+                      id="floatingInputName"
+                      placeholder="Name"
+          
+                     
+                    />
+                    <label for="floatingInputName">Name</label>
+                  </div>
+                  <div *ngIf="registerForm.get('name')?.errors && registerForm.get('name')?.touched" class="mb-3 text-danger">Invalid Name</div>
+                <div class="form-floating mb-3">
+                    <input
+                    style="background-color:rgb(246, 232, 214);"
+                      name="username"
+                      formControlName="username"
+                      type="text"
+                      class="form-control"
+                      id="floatingInputUsername"
+                      placeholder="Username"
+          
+                     
+                    />
+                    <label for="floatingInputUsername">Username</label>
+                  </div>
+                  <div *ngIf="registerForm.get('username')?.errors && registerForm.get('username')?.touched" class="mb-3 text-danger">Invalid Username</div>
+
+                <div class="form-floating mb-3">
+                    <input
+                    style="background-color:rgb(246, 232, 214);"
+                      name="email"
+                      formControlName="email"
+                      type="email"
+                      class="form-control"
+                      id="floatingInput"
+                      placeholder="name@example@gmail.com"
+          
+                     
+                    />
+                    <label for="floatingInput">Email Address</label>
+                  </div>
+                  <div *ngIf="registerForm.get('email')?.errors && registerForm.get('email')?.touched" class="mb-3 text-danger">Invalid Email</div>
+
+                  <div class="form-floating mb-3">
+                    <input
+                    style="background-color:rgb(246, 232, 214);"
+                      name="password"
+                      formControlName="password"
+                      type="password"
+                      class="form-control"
+                      id="floatingInputPassword"
+                      placeholder="Password"
+          
+                     
+                    />
+                    <label for="floatingInputPassword">Password</label>
+                  </div>
+                  <div *ngIf="registerForm.get('password')?.errors && registerForm.get('password')?.touched" class="mb-3 text-danger">Invalid Password</div>
+
+                  <div>
+                    <button style="color: rgb(246, 232, 214);" (click)="register()" type="submit"  class="btn btn-success w-100">Register</button>
+                  </div>
+                  <p class="text-center"> or </p>
+
+                  <p style="font-size: 18px;color: rgb(246, 232, 214);">Already Have an Account? <span style="cursor: pointer;" routerLink="" class="text-primary">Login</span> here </p>
+
+             </form>
+        </div>
+    </div>
+</div>

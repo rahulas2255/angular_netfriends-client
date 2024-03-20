@@ -1,0 +1,165 @@
+<div class="bg-success">
+    <div class="container">
+      <div style="height: 100vh;padding-block: 10px;" class="row w-100">
+        <div
+          style="height: 100%;  border-radius: 20px"
+          class="col-md-3 d-flex align-items-center flex-column pt-3 bg-dark"
+        >
+          <h2 class="text-success text-center">
+            <i class="fa-solid fa-user-group"></i> NF <br />
+            <hr class="w-100" />
+          </h2>
+          <h3
+            style="font-size: 23px;color: rgb(207, 204, 200);"
+            id="links"
+            class="btn w-75 text-center mt-3"
+            routerLink="/dashboard"
+          >
+            Home
+          </h3>
+          <h3
+            style="font-size: 23px;color: rgb(207, 204, 200);"
+            id="links"
+            class="btn w-75 text-center"
+            routerLink="/profile/{{userId}}"
+          >
+            Profile
+          </h3>
+          <h3
+            style="font-size: 23px;color: rgb(207, 204, 200);"
+            id="links"
+            class="btn w-75 text-center"
+            routerLink="/chat"
+          >
+            Chat
+          </h3>
+          <h4
+            (click)="logout()"
+            style="font-size: 23px;color: rgb(207, 204, 200);"
+            id="links"
+            class="mt-auto btn w-75 text-center"
+          >
+            Logout
+          </h4>
+        </div>
+        <div
+          style="
+            
+            border-radius: 20px;
+            height: 100%;
+            margin-left: 5px;
+            margin-right: 5px;"
+          class="col-lg-8 d-flex bg-dark " 
+        >
+          <div style="border-right: 1px solid rgba(124, 121, 121, 0.319);height: 100%;" class="col-lg-4 ">
+            <h4 style="color: rgb(207, 204, 200);" class="pt-3 text-center">Users</h4>
+            <hr style="color: rgb(207, 204, 200);">
+            <div class="d-flex flex-column">
+              <div style="border-bottom: 1px solid rgba(124, 121, 121, 0.319);" class="d-flex gap-3">
+                <img
+                  width="50px"
+                  height="45px"
+                  class="rounded"
+                  src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                  alt=""
+                />
+                <div class="d-flex flex-column gap-0">
+                  <p
+                    style="
+                     color: rgb(207, 204, 200);
+                      margin-bottom: 0;
+                      font-family: Verdana, Geneva, Tahoma, sans-serif;
+                      font-weight: bold;
+                    "
+                  >
+                    Rahul As
+                  </p>
+                  <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;color: rgb(207, 204, 200);">
+                    @ rahulayyappath
+                  </p>
+                </div>
+              </div>
+            </div>
+              
+          </div>
+          <div style="overflow-y: hidden;" class="col-lg-8 w-90 d-flex flex-column">
+            <h4 style="color: rgb(207, 204, 200);"  class="pt-3 text-center">Chats</h4>
+            <hr style="color: rgb(207, 204, 200);">
+            <div style="overflow-y: auto;height: calc(100% - 124px);"  class="d-flex flex-column">
+              <div style="border-bottom: 1px solid rgba(124, 121, 121, 0.319);" class="d-flex align-items-center flex-column">
+                <img style="border-radius: 85px;" width="30%" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="">
+                <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;color: rgb(207, 204, 200);" class="mt-2">Rahul As</h3>
+                <p style="color: rgb(207, 204, 200);">@rahulayyappath</p>
+              </div>
+              <div class="d-flex flex-column">
+                <div style="border-bottom: 1px solid rgba(124, 121, 121, 0.319);" class="d-flex p-1 gap-2 pt-3">
+                    
+                    <img
+                    width="50px"
+                    height="45px"
+                    class="rounded"
+                    src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                    alt=""
+                  />
+                  <div class="d-flex flex-column">
+                    <h6 style="color: rgb(207, 204, 200);" >Rahul As</h6>
+                    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 15px;color: rgb(207, 204, 200);" >hai</p>
+                  </div>
+                </div>
+                <div style="border-bottom: 1px solid rgba(124, 121, 121, 0.319);" class="d-flex p-1 gap-2 pt-3">
+                    
+                  <img
+                  width="50px"
+                  height="45px"
+                  class="rounded"
+                  src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                  alt=""
+                />
+                <div class="d-flex flex-column">
+                  <h6 style="color: rgb(207, 204, 200);" >Rahul As</h6>
+                  <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 15px;color: rgb(207, 204, 200);" >hai</p>
+                </div>
+              </div>
+              <div style="border-bottom: 1px solid rgba(124, 121, 121, 0.319);" class="d-flex p-1 gap-2 pt-3">
+                    
+                <img
+                width="50px"
+                height="45px"
+                class="rounded"
+                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                alt=""
+              />
+              <div class="d-flex flex-column">
+                <h6 style="color: rgb(207, 204, 200);" >Rahul As</h6>
+                <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 15px;color: rgb(207, 204, 200);" >hai</p>
+              </div>
+            </div>
+            <div style="border-bottom: 1px solid rgba(124, 121, 121, 0.319);" class="d-flex p-1 gap-2 pt-3">
+                    
+              <img
+              width="50px"
+              height="45px"
+              class="rounded"
+              src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+              alt=""
+            />
+            <div class="d-flex flex-column">
+              <h6 style="color: rgb(207, 204, 200);" >Rahul As</h6>
+              <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 15px;color: rgb(207, 204, 200);" >hai</p>
+            </div>
+          </div>
+              </div>
+                                 
+
+            </div>
+            <div class="input-group mb-auto">
+                <input type="text" class="form-control" placeholder="Type..." aria-label="Type here" aria-describedby="basic-addon2">
+                <button class="input-group-text" id="basic-addon2"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
